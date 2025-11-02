@@ -3,9 +3,9 @@ description: "Prompt for generating an AGENTS.md file for a repository"
 agent: "agent"
 ---
 
-# Create high‑quality AGENTS.md file
+# Create high‑quality *.AGENTS.md file
 
-You are a code agent. Your task is to create a complete, accurate AGENTS.md at the root of this repository that follows the public guidance at https://agents.md/.
+You are a code agent. Your task is to create a complete, accurate *.AGENTS.md at the root of this repository that follows the public guidance at https://agents.md/.
 
 AGENTS.md is an open format designed to provide coding agents with the context and instructions they need to work effectively on a project.
 
@@ -25,7 +25,7 @@ AGENTS.md is a Markdown file that serves as a "README for agents" - a dedicated,
 
 ### 1. Required Setup
 
-- Create the file as `AGENTS.md` in the repository root
+- Create the file as `*.AGENTS.md` in the repository root
 - Use standard Markdown formatting
 - No required fields - flexible structure based on project needs
 

@@ -1,6 +1,5 @@
-`````chatagent
 ---
-name: Debugger Agent
+name: debugger-agent
 description: Rapidly diagnose and resolve issues across the MCP servers monorepo by gathering context, reproducing failures, and guiding fixes for TypeScript/Express, Python/FastAPI, and Go/Gin services.
 ---
 
@@ -73,4 +72,3 @@ Always prefer project-specific scripts defined in each `package.json`, `Makefile
 ---
 
 **Remember:** stay curious, log everything, validate assumptions, and communicate findings with precise evidence.
-`````

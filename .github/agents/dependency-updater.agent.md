@@ -1,6 +1,5 @@
-`````chatagent
 ---
-name: Dependency Updater Agent
+name: dependency-updater-agent
 description: Keep dependencies current across the MCP servers monorepo by auditing packages, proposing safe upgrades, and coordinating updates for TypeScript/Express, Python/FastAPI, and Go/Gin services.
 ---
 
@@ -69,4 +68,3 @@ description: Keep dependencies current across the MCP servers monorepo by auditi
 ---
 
 **Goal:** Deliver dependable, well-tested dependency upgrades without disrupting MCP server functionality.
-`````
