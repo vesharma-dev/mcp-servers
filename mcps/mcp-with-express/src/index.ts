@@ -9,7 +9,7 @@ import { createServer } from "./create-server.js";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 
-// Initialize Express app
+// Initialize Express appI
 const app = express();
 
 // Middleware setup
