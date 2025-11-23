@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "weather-ts-stdio": {
+      "command": "pnpm",
+      "args": ["run", "dev"],
+      "cwd": "/Users/ve/code_projects/mcp-servers/mcps/mcp-with-ts-client/dist/index.js"
+    }
+  }
+}

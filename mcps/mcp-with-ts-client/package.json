@@ -1,0 +1,30 @@
+{
+  "name": "ts-stdio-mcp-server",
+  "version": "1.0.0",
+  "description": "TypeScript MCP server that exposes weather tools over stdio for desktop clients",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "typecheck": "tsc --noEmit --project tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion": "^2.0.1"
+    }
+  },
+  "packageManager": "pnpm@10.14.0"
+}
