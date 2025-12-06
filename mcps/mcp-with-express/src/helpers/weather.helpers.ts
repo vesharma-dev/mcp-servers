@@ -1,7 +1,7 @@
-import { NWS_API_BASE, USER_AGENT } from "../constants/config.constants.js";
-
+import { USER_AGENT } from "../constants/config.constants.js";
+import { AlertFeature } from "../types/weather.types";
 // Helper function for making NWS API requests
-async function makeNWSRequest<T>(url: string): Promise<T | null> {
+export async function makeNWSRequest<T>(url: string): Promise<T | null> {
   const headers = {
     "User-Agent": USER_AGENT,
     Accept: "application/geo+json",
@@ -17,4 +17,17 @@ async function makeNWSRequest<T>(url: string): Promise<T | null> {
     console.error("Error making NWS request:", error);
     return null;
   }
+}
+
+// Format alert data
+function formatAlert(feature: AlertFeature): string {
+  const props = feature.properties;
+  return [
+    `Event: ${props.event || "Unknown"}`,
+    `Area: ${props.areaDesc || "Unknown"}`,
+    `Severity: ${props.severity || "Unknown"}`,
+    `Status: ${props.status || "Unknown"}`,
+    `Headline: ${props.headline || "No headline"}`,
+    "---",
+  ].join("\n");
 }
