@@ -20,7 +20,7 @@ export async function makeNWSRequest<T>(url: string): Promise<T | null> {
 }
 
 // Format alert data
-function formatAlert(feature: AlertFeature): string {
+export function formatAlert(feature: AlertFeature): string {
   const props = feature.properties;
   return [
     `Event: ${props.event || "Unknown"}`,
