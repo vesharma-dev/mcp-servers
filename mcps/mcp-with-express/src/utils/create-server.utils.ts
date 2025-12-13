@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { getAlerts, getForecast } from "../tools/weather.tools";
-import { State } from "../types/geo.types";
+import { getAlerts, getForecast } from "../tools/weather.tools.js";
+import { State } from "../types/geo.types.js";
 import { server } from "./create-mcp-server.utils.js";
 export const createServer = () => {
   const MCPServer = server;

@@ -1,5 +1,5 @@
 import { USER_AGENT } from "../constants/config.constants.js";
-import { AlertFeature } from "../types/weather.types";
+import { AlertFeature } from "../types/weather.types.js";
 // Helper function for making NWS API requests
 export async function makeNWSRequest<T>(url: string): Promise<T | null> {
   const headers = {

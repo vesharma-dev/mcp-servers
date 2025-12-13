@@ -1,12 +1,12 @@
-import type { State } from "../types/geo.types";
+import type { State } from "../types/geo.types.js";
 import type {
   AlertsResponse,
   PointsResponse,
   ForecastResponse,
   ForecastPeriod,
-} from "../types/weather.types";
-import { formatAlert, makeNWSRequest } from "../helpers/weather.helpers";
-import { NWS_API_BASE } from "../constants/config.constants";
+} from "../types/weather.types.js";
+import { formatAlert, makeNWSRequest } from "../helpers/weather.helpers.js";
+import { NWS_API_BASE } from "../constants/config.constants.js";
 
 type ToolTextContent = {
   [x: string]: unknown;
