@@ -3,7 +3,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import path from "path";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { createServer } from "./create-server.js";
+import { createServer } from "./utils/create-server.utils.js";
 
 // Environment setup
 dotenv.config();
