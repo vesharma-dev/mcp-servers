@@ -1,0 +1,40 @@
+import { z } from "zod";
+import { getAlerts, getForecast } from "../tools/weather.tools.js";
+import { State } from "../types/geo.types.js";
+import { server } from "./create-mcp-server.utils.js";
+export const createServer = () => {
+  const MCPServer = server;
+  // Register weather tools
+  MCPServer.tool(
+    "get-alerts",
+    "Get weather alerts for a state",
+    {
+      state: z
+        .string()
+        .length(2)
+        .describe("Two-letter state code (e.g. CA, NY)"),
+    },
+    async ({ state }: { state: State }) => getAlerts(state)
+  );
+
+  MCPServer.tool(
+    "get-forecast",
+    "Get weather forecast for a location",
+    {
+      latitude: z
+        .number()
+        .min(-90)
+        .max(90)
+        .describe("Latitude of the location"),
+      longitude: z
+        .number()
+        .min(-180)
+        .max(180)
+        .describe("Longitude of the location"),
+    },
+    async ({ latitude, longitude }: { latitude: number; longitude: number }) =>
+      getForecast(latitude, longitude)
+  );
+
+  return { server };
+};
