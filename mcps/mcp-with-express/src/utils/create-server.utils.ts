@@ -1,17 +1,11 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { getAlerts, getForecast } from "../tools/weather.tools";
 import { State } from "../types/geo.types";
-
+import { server } from "./create-mcp-server.utils.js";
 export const createServer = () => {
-  // Create server instance
-  const server = new McpServer({
-    name: "weather",
-    version: "1.0.0",
-  });
-
+  const MCPServer = server;
   // Register weather tools
-  server.tool(
+  MCPServer.tool(
     "get-alerts",
     "Get weather alerts for a state",
     {
@@ -23,7 +17,7 @@ export const createServer = () => {
     async ({ state }: { state: State }) => getAlerts(state)
   );
 
-  server.tool(
+  MCPServer.tool(
     "get-forecast",
     "Get weather forecast for a location",
     {
